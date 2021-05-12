@@ -57,26 +57,104 @@ else:
 
 '''
 
-# Escriba un programa que simule un juego en el que dos jugadores (Elena y Fernando) tiran dos dados. El que
-# saque el valor más alto, gana. Si el valor más alto coincide, decide el otro dado. Si también coincide,
-# empatan.
+# Escriba un programa que simule un juego en el que dos jugadores (Gloria y Héctor) sacan tres cartas al azar
+# del 1 al 10. Gana el jugador que obtenga la mayor puntuación total, siempre que no se pase de quince, en
+# cuyo caso el jugador pierde.
 
+'''
 
+import random 
+
+g = random.randrange (1, 11)
+g_2 = random.randrange (1, 11)
+g_3 = random.randrange (1, 11)
+h = random.randrange (1, 11)
+h_2 = random.randrange (1, 11)
+h_3 = random.randrange (1, 11)
+
+total_g = g + g_2 + g_3
+total_h = h + h_2 + h_3
+
+print (f'Gloria ha sacado un {g}, un {g_2} y un {g_3}.')
+print (f'Héctor ha sacado un {h}, un {h_2} y un {h_3}')
+
+if total_g > 15 and total_h > 15:
+    print ('No ha ganado nadie.')
+elif total_g > 15:
+    print ('Ha ganado Héctor.')
+elif total_h > 15:
+    print ('Ha ganado Gloria.')
+else:
+    if total_g > total_h:
+        print ('Ha ganado Gloria.')
+    elif total_h > total_g:
+        print ('Ha ganado Héctor.')
+    else:
+        print ('Han empatado.')
+
+'''
+
+# Escriba un programa que simule el juego Piedra, papel, tijera para dos jugadores (Inés y Juan).
+
+'''
+
+import random 
+
+i = random.randrange (1, 4)
+j = random.randrange (1, 4)
+
+print ('Inés ha sacado ', end= '')
+if i == 1:
+    print ('piedra.')
+elif i == 2:
+    print ('papel.')
+else:
+    print ('tijera.')
+print ('Juan ha sacado ', end= '')
+if j == 1:
+    print ('piedra.')
+elif j == 2:
+    print ('papel.')
+else:
+    print ('tijera.')
+
+if j == i:
+    print ('Han empatado.')
+elif i == 1 and j == 3:
+    print ('Ha ganado Inés.')
+elif i == 2 and j == 1:
+    print ('Ha ganado Inés.')
+elif i == 3 and j == 2:
+    print ('Ha ganado Inés.')
+else:
+    print ('Ha ganado Juan.')
+
+'''
+
+# Resuelva este ejercicio utilizando la función random.choice(), de manera que se seleccione un valor entre 
+# "piedra", "papel" y "tijera".
+
+'''
 
 import random
 
-e = random.randrange (1, 7)
-e_2 = random.randrange (1, 7)
-f = random.randrange (1, 7)
-f_2 = random.randrange (1, 7)
+juego = ['piedra', 'papel', 'tijera']
 
-total_elena = e + e_2
-total_fernando = f + f_2
+i = random.choice(juego)
+j = random.choice(juego)
 
-print (f'Elena ha sacado un {e} y un {e_2}')
-print (f'Fernando ha sacado un {f} y un {f_2}')
+print (f'Inés ha sacado {i}.')
+print (f'Juan ha sacado {j}.')
 
-if total_elena > total_fernando:
-    print ('Ha ganado Elena.')
-elif total_fernando > total_elena:
-    print ('Ha ganado Fernando.')
+if j == i:
+    print ('Han empatado.')
+elif i == 'piedra' and j == 'tijera':
+    print ('Ha ganado Inés.')
+elif i == 'papel' and j == 'piedra':
+    print ('Ha ganado Inés.')
+elif i == 'tijera' and j == 'papel':
+    print ('Ha ganado Inés.')
+else:
+    print ('Ha ganado Juan.')
+
+'''
