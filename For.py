@@ -59,9 +59,8 @@ else:
 # Escriba un programa que pregunte cuántos números se van a introducir, pida esos números, y muestre
 # un mensaje cada vez que un número no sea mayor que el anterior.
 
-'''
 
-perder = False
+
 num_actual = -1
 
 valores = int (input('Cuántos valores va a introducir?: '))
@@ -70,14 +69,18 @@ if valores <= 0:
     print ('¡Imposible!')
 else:
     num = int (input('Escriba un número: '))
-    num_anterior = int (input (f'Escriba un número más grande que {num}: '))
+    pregunta = f'Escriba un número más grande que {num}: ' 
     
-    if num_anterior <= num:
-        print (f'¡{num_anterior} no es mas grande que {num}!')
+    for i in range (valores-1):
+        num_anterior = int (input(pregunta))
+        num_anterior = num_actual
+        num_actual = num
+        if num_anterior <= num:
+            print (f'{num_anterior} no es más grande que {num}!')
+            
 
-'''
+
 
     
 
-   
 
