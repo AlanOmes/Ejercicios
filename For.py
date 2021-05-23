@@ -59,7 +59,7 @@ else:
 # Escriba un programa que pregunte cuántos números se van a introducir, pida esos números, y muestre
 # un mensaje cada vez que un número no sea mayor que el anterior.
 
-
+'''
 
 num_actual = -1
 
@@ -72,15 +72,86 @@ else:
     pregunta = f'Escriba un número más grande que {num}: ' 
     
     for i in range (valores-1):
-        num_anterior = int (input(pregunta))
-        num_anterior = num_actual
         num_actual = num
-        if num_anterior <= num:
-            print (f'{num_anterior} no es más grande que {num}!')
+        num_actual = int (input(pregunta))
+        
+'''
+
+# Escriba un programa que pregunte cuántos números se van a introducir, pida esos números y escriba cuántos
+# negativos ha introducido.
+
+'''
+
+valores = int (input ('¿Cuántos valores va a introducir?: '))
+cant_negativos = 0
+negativos = False
+
+if valores <= 0:
+    print ('¡Imposible!')
+else:
+    for i in range (1, valores+1):
+        num = int (input (f'Escriba el número {i}: '))
+        if num < 0:
+            negativos = True
+            cant_negativos = cant_negativos + 1
+    if negativos == True:
+        if cant_negativos == 1:
+            print (f'Ha escrito {cant_negativos} número negativo.')
+        else:
+            print (f'Ha escrito {cant_negativos} números negativos.')
+    else:
+        print ('No ha escrito ningún número negativo.')
+    
+'''
+
+# Escriba un programa que pregunte cuántos números se van a introducir, pida esos números, y diga al final 
+# cuántos han sido pares y cuántos impares.
+
+'''
+
+valores = int (input ('¿Cuántos valores va a introducir?: '))
+impares = 0
+pares = 0
+
+if valores <= 0:
+    print ('¡Imposible!')
+else:
+    for i in range (1, valores+1):
+        num = int (input (f'Escriba el valor {i}: '))
+        if num % 2 == 0:
+            pares = pares + 1
+        else:
+            impares = impares + 1
+    print (f'Ha escrito {pares} números pares y {impares} números impares.')
+    print ('Gracias por su colaboración.')
+
+'''
+
+# Escriba un programa que pida un número entero mayor que 1 y que escriba si el número es un número primo o no.
+
+num = int (input ('Escriba un número entero mayor que 1: '))
+primo = True
+
+if num <= 1:
+    print ('¡Le he pedido un número entero mayor que 1!')
+else:
+    for i in range (2, 11):
+        if num % i == 0:
+            primo = False
+    if primo == True:
+        print (f'{num} es primo.')
+    else:
+        print (f'{num} no es primo.')
+
+    
             
 
 
 
-    
+
+
+
+
+
 
 
