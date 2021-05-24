@@ -129,6 +129,8 @@ else:
 
 # Escriba un programa que pida un número entero mayor que 1 y que escriba si el número es un número primo o no.
 
+'''
+
 num = int (input ('Escriba un número entero mayor que 1: '))
 primo = True
 
@@ -137,15 +139,32 @@ if num <= 1:
 else:
     for i in range (2, 11):
         if num % i == 0:
-            primo = False
+            if num != i:
+                primo = False
     if primo == True:
         print (f'{num} es primo.')
     else:
         print (f'{num} no es primo.')
 
-    
-            
+'''
 
+# Escriba un programa que pregunte cuantos números se van a introducir, pida esos números (que puedan
+# ser decimales) y calcule su suma.
+
+'''
+
+valores = int (input('¿Cuántos valores va a introducir?: '))
+suma = 0
+
+if valores <= 0:
+    print ('¡Imposible!')
+else:
+    for i in range (1, valores+1):
+        num = float (input (f'Escriba el número {i}: '))
+        suma = suma + num
+    print (f'La suma de los números que ha escrito es {suma}.')
+
+'''
 
 
 
