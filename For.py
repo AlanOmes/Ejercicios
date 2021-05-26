@@ -166,11 +166,90 @@ else:
 
 '''
 
+# Escriba un programa que pida dos números enteros y escriba la suma de todos los enteros desde el
+# primer número hasta el segundo.
 
+'''
 
+num = int (input ('Escriba un número entero positivo: '))
+num_2 = int (input (f'Escriba un número entero mayor que {num}: '))
+suma = 0
 
+if num_2 <= num:
+    print (f'¡Le he pedido un número entero mayor que {num}!')
+else:
+    for i in range (num, num_2+1):
+        suma = suma + i
+    print (f'La suma desde {num} hasta {num_2} es {suma}.')
 
+'''    
 
+# Mejore el programa anterior haciendo que el programa escriba la suma realizada.
 
+'''
+
+num = int (input ('Escriba un número entero positivo: '))
+num_2 = int (input (f'Escriba un número entero mayor que {num}: '))
+suma = 0
+
+if num_2 <= num:
+    print (f'Le he pedido un número entero mayor que {num}!')
+else:
+    for i in range (num, num_2+1):
+        suma = suma + i
+    print (f'La suma desde {num} hasta {num_2} es {suma}.')
+    for i in range (num, num_2+1):
+        print (i, end= ' ')
+        if i == num_2:
+            print (f'= {suma}')
+        else:
+            print ('+', end= ' ')
+
+'''
+    
+# Escriba un programa que pregunte cuántos números se van a introducir, pida esos números, y escriba
+# el mayor, el menor y la media aritmética.
+# Se recuerda que la media aritmética de un conjunto de valores es la suma de esos valores dividida
+# por la cantidad de valores.    
+
+'''
+
+valores = int (input ('¿Cuántos valores va a introducir?: '))
+maxx = -1
+minn = 999999
+suma = 0
+
+if valores <= 0:
+    print ('¡Imposible!')
+else:
+    for i in range (1, valores+1):
+        num = float (input (f'Escriba el número {i}: '))
+        suma = suma + num
+        if num > maxx:
+            maxx = num
+        if num < minn:
+            minn = num
+    print (f'El número más pequeño de los introducidos es {minn}')
+    print (f'El número más grande de los introducidos es {maxx}')
+    media = suma / valores
+    print (f'La media arimética de los números introducidos es {media}')
+
+'''
+
+# Escriba un programa que pida un número entero mayor que cero y calcule su factorial.
+
+'''
+
+num = int (input ('Escriba un número entero mayor que cero: '))
+factorial = 1
+
+if num <= 0:
+    print ('¡Le he pedido un número entero mayor que cero!')
+else:
+    for i in range (1, num+1):
+        factorial = factorial * i
+    print (f'El factorial de {num} es {factorial}.')
+
+'''
 
 
