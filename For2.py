@@ -71,21 +71,3 @@ else:
 
 '''
 
-# Escriba un programa que genere una multiplicación de dos números del 11 al 99 al azar, pregunte por
-# el resultado y diga si se ha dado la respuesta correcta, si está a menos del 10% del valor correcta
-# o a menos del 30%.
-
-num = random.randrange (11, 100)
-num_2 = random.randrange (11, 100)
-r = num * num_2
-
-rta = int (input (f'¿Cuánto es {num} x {num_2}?: '))
-diez = (10 * r) / 100
-treinta = (30 * r) / 100
-
-if rta == r:
-    print ('¡Respuesta correcta!')
-elif rta <= diez:
-    print (f'¡Ha fallado por menos del 10%! La respuesta correcta era {r}.')
-elif rta <= treinta:
-    print (f'¡Ha fallado por menos del 30%! La respuesta correcta era {r}.')
