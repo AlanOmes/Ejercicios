@@ -135,7 +135,43 @@ print ('La lista creada es', lista)
 # Escriba un programa que pida una frase y una vocal y cambie todas las vocales de la frase por la 
 # vocal (una forma de hacerlo es convertir la frase en una lista y hacer el cambio en la lista.
 
-vocales = ['a', 'e', 'i', 'o', 'u']
+'''
 
 frase = input ('Dígame algo: ')
 vocal = input ('Dígame una vocal: ')
+lista = []
+p = 0
+
+for i in range (len(frase)):
+    lista.append(frase[i])
+    if lista[p] == 'a' or lista[p] == 'e' or lista[p] == 'i' or lista[p] == 'o' or lista[p] == 'u':
+        lista[p] = vocal
+    p = p + 1
+for i in lista:
+    print (f'La frase ahora es: {i}', end= '')
+
+'''
+
+# Escriba un programa que pida una frase y diga si es palíndroma (una forma de hacerlo es convertir la frase en
+# una lista, eliminar los espacios y comparar)
+
+
+
+frase = input ('Dígame algo: ')
+lista = []
+palindroma = False
+
+for i in range (len(frase)):
+    if frase[i] != ' ':
+        lista.append(frase[i])
+print (lista)
+
+
+
+'''
+if palindroma == True:
+    print (f'{frase} es palíndroma.')
+else:
+    print (f'{frase} no es palíndroma.')
+'''  
+    
