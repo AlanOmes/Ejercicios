@@ -139,7 +139,54 @@ print (lista)
 # Escriba un programa que permita crear dos listas de palabras y que, a continuación, elimine de la primera
 # lista los nombres de la segunda lista.
 
+'''
+
+cant = int (input ('Dígame cuántas palabras tiene la lista: '))
+lista = []
+
+for i in range (1, cant+1):
+    pal = input (f'Dígame la palabra {i}: ')
+    lista.append(pal))
+    
+print()
+print (f'La lista creada es: {lista}')
+print()
+
+cant_2 = int (input ('Dígame cuántas palabras tiene la lista de palabras a eliminar: '))
+lista_2: []
+
+for i in range (1, cant_2+1):
+    pal_2 = input (f'Dígame la palabra{i}: ')
+    lista_2.append(pal_2)
+
+print ()
+print (f'La lista de palabras a eliminar es: {lista_2}')
+print ()
 
 
+for i in range (len(lista_2)):
+    if lista_2[i] == lista[p]:
 
+'''
 
+# Escriba un programa que permita crear una lista de palabras y que, a continuación, cree una segunda lista 
+# igual a la primera, pero al revés (no se trata de escribir la lista al revés, sino de crear una lista 
+# distinta).
+
+cant = int (input ('Dígame cuántas palabras tiene la lista: '))
+lista = []
+
+for i in range (1, cant+1):
+    pal = input (f'Palabra número {i}: ')
+    lista.append(pal)
+
+print ()
+print (f'La lista creada es: {lista}')
+print ()
+
+lista_2 = []
+
+for i in range (-cant+1, 0+1):
+    l = lista[i]
+    lista_2.append(l)
+    print (l)
