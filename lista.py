@@ -163,15 +163,28 @@ print ()
 print (f'La lista de palabras a eliminar es: {lista_2}')
 print ()
 
-p = 0
-for i in range (len(lista_2)):
-    if lista_2[i] == lista[p]:
-        del lista[p]
-        p = p + 1
-    else:
-        p = p + 1
-print (lista)
+for i in range (1, len(lista_2) +1):
+    maxx = -9999999
+    if i > maxx:
+        maxx == i
 
+p = 0
+borrar = False
+
+while borrar:
+    c = 0
+    for i in range (len(lista_2)):
+        if lista_2[i] == lista[p]:
+            del lista[p]
+            c = c + 1
+            p = p + 1
+        else:
+            p = p + 1
+    if c == maxx:
+        borrar == True   
+
+print 
+    
 
 # Escriba un programa que permita crear una lista de palabras y que, a continuación, cree una segunda lista 
 # igual a la primera, pero al revés (no se trata de escribir la lista al revés, sino de crear una lista 
