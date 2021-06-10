@@ -139,7 +139,7 @@ print (lista)
 # Escriba un programa que permita crear dos listas de palabras y que, a continuación, elimine de la primera
 # lista los nombres de la segunda lista.
 
-
+'''
 
 cant = int (input ('Dígame cuántas palabras tiene la lista: '))
 lista = []
@@ -183,7 +183,7 @@ while borrar:
     if c == maxx:
         borrar == True   
 
-print 
+'''
     
 
 # Escriba un programa que permita crear una lista de palabras y que, a continuación, cree una segunda lista 
@@ -203,11 +203,29 @@ print ()
 print (f'La lista creada es: {lista}')
 print ()
 
+p = len(lista) -1
 lista_2 = []
 
-for i in range (-cant+1, 0+1):
-    l = lista[i]
-    lista_2.append(l)
-    print (l)
+invertir = False
+
+while (p >= 0):
+    lista_2.append(lista[p])
+    p = p - 1
+
+print (f'La lista inversa es: {lista_2}')
+
+'''
+
+# Escriba un programa que permita crear una lista de palabras y que, a continuación, elimine los elementos 
+# repetidos (dejando únicamente el primero de los elementos repetidos).
+
+'''
+
+cant = int (input ('Dígame cuántas palabras tiene la lista: '))
+lista = []
+
+for i in range (1, cant+1):
+    pal = input (f'Dígame la palabra {i}: ')
+    lista.append(pal)
 
 '''
